@@ -7,6 +7,7 @@ div:before, div:after {
   content: '';
   }
 body {
+  font-family: sans-serif;
   display: block;
   overflow: hidden;
   background: #00ffff;
@@ -16,7 +17,15 @@ body.on #theRainbow {
 }
 #theRainbow {
   display: none;
+  animation: slideup 3s linear infinite;
+  -webkit-animation: slideup 3s linear infinite;
+  -moz-animation: slideup 3s linear infinite;
+  -o-animation: slideup 3s linear infinite;
 }
+@keyframes slideup { from { top: 0; } to { top: -100%; } }
+@-webkit-keyframes slideup { from { top: 0; } to { top: -100%; } }
+@-moz-keyframes slideup { from { top: 0; } to { top: -100%; } }
+@-o-keyframes slideup { from { top: 0; } to { top: -100%; } }
 #theRainbow,
 #theRainbow:before,
 #theRainbow:after {
@@ -47,7 +56,6 @@ body h1 {
   -moz-border-radius: 10% 66% 0% 0%;
   -webkit-border-radius: 10% 66% 0% 0%;
   content: "";
-  font-family: 'Russo One', sans-serif;
   font-weight: bold;
   font-size: 80px;
   color: #fff;
@@ -104,29 +112,31 @@ body.on h2,
 body.off h2 {
   display: none;
   }
-.jigglypuff,
-.jigglypuff:before {
+#jigglypuff,
+#jigglypuff:before {
   position: absolute;
   z-index: 9;
   cursor: pointer;
   }
-.jigglypuff:after {
+#jigglypuff:after {
   position: absolute;
   z-index: 10;
   cursor: pointer;
   }
-.jigglypuff {
+#jigglypuff {
   top: 60%;
   left: 20%;
-  height: 5px;
-  width: 20px;
-  border-radius: 30% 30% 30% 30%;
-  -moz-border-radius: 30% 30% 30% 30%;
-  -webkit-border-radius: 30% 30% 30% 30%;
+  height: 102px;
+  width: 125px;
+  border-radius: 50% 50% 49% 49%;
+  -moz-border-radius: 50% 50% 49% 49%;
+  -webkit-border-radius: 50% 50% 49% 49%;
   background: rgba(255, 0, 0, 0);
-  box-shadow: 29px 120px 0px 5px #DB93C7, 27px 125px 0px 7px #ffb7fd, 77px 120px 0px 5px #DB93C7, 80px 125px 0px 7px #ffb7fd;
+  box-shadow:
+    /*Hands*/ 57px 41px 0px -43px #ffb7fd, 56px 43px 0px -42px #DB93C7, -49px 44px 0px -44px #ffb7fd, -46px 45px 0px -42px #DB93C7,
+    /*Feet*/ -17px 74px 0px -44px #DB93C7, -21px 77px 0px -42px #ffb7fd, 21px 74px 0px -44px #DB93C7, 27px 77px 0px -42px #ffb7fd;
   }
-.jigglypuff:before {
+#jigglypuff:before {
   width: 10px;
   height: 10px;
   left: 53px;
@@ -139,18 +149,19 @@ body.off h2 {
   box-shadow: -23px 40px 0px 6px #ffb7fd, -35px -26px 0px 8px #000000, -23px -17px 0 25px #ffb7fd, 44px -30px 0px 8px #000000, 44px -30px 0px 15px #ffb7fd;
   transform: rotate(3deg);
   }
-.jigglypuff:after {
+#jigglypuff:after {
   width: 10px;
   height: 10px;
   left: 52px;
   top: 48px;
   background-color: #ffb7fd;
   border-radius: 50%;
-  box-shadow:  -23px 40px 0px 6px #ffb7fd, -21px 38px 0px 6px #DB93C7, 33px 40px 0px 9px #ffb7fd, 31px 45px 0px 6px #DB93C7, 16px -22px 0px 6px #ffb7fd, 17px -24px 0px 7px #DB93C7, 6px -36px 0px 23px #ffb7fd, 4px -32px 0px 21px #DB93C7, -21px -6px 0px 3px #FFFFFF, -27px 0px 0 10px #009FD5, -29px 2px 0 13px #38BFFF, -29px 2px 0px 16px #FFFFFF,32px -6px 0px 3px #FFFFFF, 38px 0px 0 10px #009FD5, 39px 2px 0 13px #38BFFF, 39px 2px 0px 16px #FFFFFE, 5px -11px 0px 37px #ffb7fd, -1px 29px 0px 1px #c00000, 5px 22px 0px 11px #ff0000, 6px 8px 0px 56px #ffb7fd, 6px 17px 0px 57px #DB93C7;
+  box-shadow:
+    16px -22px 0px 6px #ffb7fd, 17px -24px 0px 7px #DB93C7, 6px -36px 0px 23px #ffb7fd, 4px -32px 0px 21px #DB93C7, -21px -6px 0px 3px #FFFFFF, -27px 0px 0 10px #009FD5, -29px 2px 0 13px #38BFFF, -29px 2px 0px 16px #FFFFFF,32px -6px 0px 3px #FFFFFF, 38px 0px 0 10px #009FD5, 39px 2px 0 13px #38BFFF, 39px 2px 0px 16px #FFFFFE, 5px -11px 0px 37px #ffb7fd, -1px 29px 0px 1px #c00000, 5px 22px 0px 11px #ff0000, 6px 8px 0px 56px #ffb7fd, 6px 17px 0px 57px #DB93C7;
   }
 
 /*Jugglypuff in Awe*/
-.on .jigglypuff {
+.on #jigglypuff {
   top: 58%;
   left: 20%;
   height: 15px;
@@ -161,7 +172,7 @@ body.off h2 {
   background: rgba(255, 0, 0, 0);
   box-shadow: 34px 112px 0px 7px #DB93C7, 34px 125px 0px 7px #ffb7fd, 78px 114px 0px 7px #DB93C9, 79px 125px 0px 7px #ffb7fd;
   }
-.on .jigglypuff:before {
+.on #jigglypuff:before {
   width: 10px;
   height: 10px;
   left: 53px;
@@ -174,7 +185,7 @@ body.off h2 {
   box-shadow: -34px -28px 0px 8px #000000, -22px -18px 0 25px #ffb7fd, 43px -32px 0px 8px #000000, 42px -32px 0px 15px #ffb7fd;
   transform: rotate(3deg);
   }
-.on .jigglypuff:after {
+.on #jigglypuff:after {
   width: 9px;
   height: 12px;
   left: 52px;
@@ -197,7 +208,7 @@ body.off h2 {
   }
 
 /*Angry Jugglypuff*/
-.off .jigglypuff {
+.off #jigglypuff {
   top: 60%;
   left: 20%;
   height: 5px;
@@ -208,7 +219,7 @@ body.off h2 {
   background: rgba(255, 0, 0, 0);
   box-shadow: 29px 120px 0px 5px #DB93C7, 27px 125px 0px 7px #ffb7fd, 77px 120px 0px 5px #DB93C7, 80px 125px 0px 7px #ffb7fd;
   }
-.off .jigglypuff:before {
+.off #jigglypuff:before {
   width: 10px;
   height: 10px;
   left: 53px;
@@ -227,7 +238,7 @@ body.off h2 {
     44px -30px 0px 15px #ffb7fd;
   transform: rotate(3deg);
   }
-.off .jigglypuff:after {
+.off #jigglypuff:after {
   width: 11px;
   height: 9px;
   left: 52px;
