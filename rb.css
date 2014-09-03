@@ -2,53 +2,18 @@
   padding: 0;
   margin: 0;
   }
-div:before, div:after {
-  display: block;
-  content: '';
-  }
 body {
   font-family: sans-serif;
   display: block;
   overflow: hidden;
   background: #00ffff;
-  }
-body.on #theRainbow {
-  display: block;
-}
-#theRainbow {
-  display: none;
-  animation: slideup 3s linear infinite;
-  -webkit-animation: slideup 3s linear infinite;
-  -moz-animation: slideup 3s linear infinite;
-  -o-animation: slideup 3s linear infinite;
-}
-@keyframes slideup { from { top: 0; } to { top: -100%; } }
-@-webkit-keyframes slideup { from { top: 0; } to { top: -100%; } }
-@-moz-keyframes slideup { from { top: 0; } to { top: -100%; } }
-@-o-keyframes slideup { from { top: 0; } to { top: -100%; } }
-#theRainbow,
-#theRainbow:before,
-#theRainbow:after {
-  position: absolute;
-  width: 100%;
   height: 100%;
-}
-#theRainbow:after {
-  top: 100%;
-}
-#theRainbow:before,
-#theRainbow:after {
-  background: -moz-linear-gradient(top, #ff3232 0%, #ff2828 10%, #ff9b28 11%, #ff9b28 20%, #ffff00 21%, #ffff00 30%, #90ff00 31%, #90ff00 40%, #00ff00 41%, #00ff00 50%, #00ffff 51%, #00ffff 60%, #009dff 61%, #009dff 70%, #000fff 71%, #000fff 80%, #7000ff 81%, #7000ff 90%, #ff289b 91%, #ff289b 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3232), color-stop(10%,#ff2828), color-stop(11%,#ff9b28), color-stop(20%,#ff9b28), color-stop(21%,#ffff00), color-stop(30%,#ffff00), color-stop(31%,#90ff00), color-stop(40%,#90ff00), color-stop(41%,#00ff00), color-stop(50%,#00ff00), color-stop(51%,#00ffff), color-stop(60%,#00ffff), color-stop(61%,#009dff), color-stop(70%,#009dff), color-stop(71%,#000fff), color-stop(80%,#000fff), color-stop(81%,#7000ff), color-stop(90%,#7000ff), color-stop(91%,#ff289b), color-stop(100%,#ff289b)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #ff3232 0%,#ff2828 10%,#ff9b28 11%,#ff9b28 20%,#ffff00 21%,#ffff00 30%,#90ff00 31%,#90ff00 40%,#00ff00 41%,#00ff00 50%,#00ffff 51%,#00ffff 60%,#009dff 61%,#009dff 70%,#000fff 71%,#000fff 80%,#7000ff 81%,#7000ff 90%,#ff289b 91%,#ff289b 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #ff3232 0%,#ff2828 10%,#ff9b28 11%,#ff9b28 20%,#ffff00 21%,#ffff00 30%,#90ff00 31%,#90ff00 40%,#00ff00 41%,#00ff00 50%,#00ffff 51%,#00ffff 60%,#009dff 61%,#009dff 70%,#000fff 71%,#000fff 80%,#7000ff 81%,#7000ff 90%,#ff289b 91%,#ff289b 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #ff3232 0%,#ff2828 10%,#ff9b28 11%,#ff9b28 20%,#ffff00 21%,#ffff00 30%,#90ff00 31%,#90ff00 40%,#00ff00 41%,#00ff00 50%,#00ffff 51%,#00ffff 60%,#009dff 61%,#009dff 70%,#000fff 71%,#000fff 80%,#7000ff 81%,#7000ff 90%,#ff289b 91%,#ff289b 100%); /* IE10+ */
-  background: linear-gradient(to bottom, #ff3232 0%,#ff2828 10%,#ff9b28 11%,#ff9b28 20%,#ffff00 21%,#ffff00 30%,#90ff00 31%,#90ff00 40%,#00ff00 41%,#00ff00 50%,#00ffff 51%,#00ffff 60%,#009dff 61%,#009dff 70%,#000fff 71%,#000fff 80%,#7000ff 81%,#7000ff 90%,#ff289b 91%,#ff289b 100%); /* W3C */
+  width: 100%;
   }
 body h1 {
   position: absolute;
   padding-left: 20px;
-  z-index: 8;
+  z-index: 6;
   top: 0px;
   left: 0px;
   width: 100%;
@@ -84,6 +49,7 @@ body h2 {
   color: #000;
   box-shadow: -2px 3px 0px 0px #DB93C7;
   cursor: pointer;
+  z-index: 8;
 }
 body.off {
   background: #A1BEBE;
@@ -112,6 +78,108 @@ body.on h2,
 body.off h2 {
   display: none;
   }
+
+/* ------------------------------------------------------------------------- */
+/* ------------ The Rainbow ------------------------------------------------ */
+.on #theRainbow {
+  display: block;
+  }
+#theRainbow {
+  display: none;
+  animation: slideup 3s linear infinite;
+  -webkit-animation: slideup 3s linear infinite;
+  -moz-animation: slideup 3s linear infinite;
+  -o-animation: slideup 3s linear infinite;
+}
+@-webkit-keyframes slideup { from { top: 0; } to { top: -100%; } }
+   @-moz-keyframes slideup { from { top: 0; } to { top: -100%; } }
+     @-o-keyframes slideup { from { top: 0; } to { top: -100%; } }
+        @keyframes slideup { from { top: 0; } to { top: -100%; } }
+#theRainbow,
+#theRainbow:before,
+#theRainbow:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  }
+#theRainbow:after {
+  top: 100%;
+  }
+#theRainbow:before,
+#theRainbow:after {
+  display: block;
+  content: '';
+  background: -moz-linear-gradient(top, #ff3232 0%, #ff2828 10%, #ff9b28 11%, #ff9b28 20%, #ffff00 21%, #ffff00 30%, #90ff00 31%, #90ff00 40%, #00ff00 41%, #00ff00 50%, #00ffff 51%, #00ffff 60%, #009dff 61%, #009dff 70%, #000fff 71%, #000fff 80%, #7000ff 81%, #7000ff 90%, #ff289b 91%, #ff289b 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3232), color-stop(10%,#ff2828), color-stop(11%,#ff9b28), color-stop(20%,#ff9b28), color-stop(21%,#ffff00), color-stop(30%,#ffff00), color-stop(31%,#90ff00), color-stop(40%,#90ff00), color-stop(41%,#00ff00), color-stop(50%,#00ff00), color-stop(51%,#00ffff), color-stop(60%,#00ffff), color-stop(61%,#009dff), color-stop(70%,#009dff), color-stop(71%,#000fff), color-stop(80%,#000fff), color-stop(81%,#7000ff), color-stop(90%,#7000ff), color-stop(91%,#ff289b), color-stop(100%,#ff289b)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ff3232 0%,#ff2828 10%,#ff9b28 11%,#ff9b28 20%,#ffff00 21%,#ffff00 30%,#90ff00 31%,#90ff00 40%,#00ff00 41%,#00ff00 50%,#00ffff 51%,#00ffff 60%,#009dff 61%,#009dff 70%,#000fff 71%,#000fff 80%,#7000ff 81%,#7000ff 90%,#ff289b 91%,#ff289b 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ff3232 0%,#ff2828 10%,#ff9b28 11%,#ff9b28 20%,#ffff00 21%,#ffff00 30%,#90ff00 31%,#90ff00 40%,#00ff00 41%,#00ff00 50%,#00ffff 51%,#00ffff 60%,#009dff 61%,#009dff 70%,#000fff 71%,#000fff 80%,#7000ff 81%,#7000ff 90%,#ff289b 91%,#ff289b 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ff3232 0%,#ff2828 10%,#ff9b28 11%,#ff9b28 20%,#ffff00 21%,#ffff00 30%,#90ff00 31%,#90ff00 40%,#00ff00 41%,#00ff00 50%,#00ffff 51%,#00ffff 60%,#009dff 61%,#009dff 70%,#000fff 71%,#000fff 80%,#7000ff 81%,#7000ff 90%,#ff289b 91%,#ff289b 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #ff3232 0%,#ff2828 10%,#ff9b28 11%,#ff9b28 20%,#ffff00 21%,#ffff00 30%,#90ff00 31%,#90ff00 40%,#00ff00 41%,#00ff00 50%,#00ffff 51%,#00ffff 60%,#009dff 61%,#009dff 70%,#000fff 71%,#000fff 80%,#7000ff 81%,#7000ff 90%,#ff289b 91%,#ff289b 100%); /* W3C */
+  }
+
+
+/* ------------------------------------------------------------------------- */
+/* ------------ game parts ------------------------------------------------- */
+#score {
+  display: none;
+  width: 100px;
+  line-height: 1.1em;
+  font-size: 1em;
+  padding: .5em;
+  border-radius: 20px;
+  background: #000000;
+  color: #ffffff;
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  z-index: 8;
+  }
+.on #score,
+.off #score {
+  display: block;
+  }
+
+
+#field {
+  position: absolute;
+  display: block;
+  top: 0px;
+  right: 80px;
+  height: 100%;
+  width: 45%;
+  z-index: 7;
+  -webkit-backface-visibility: hidden; /* prevent flash at start of animation */
+  }
+
+.pokeball {
+  position: absolute;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border: 0px solid #000000;
+  background-image: radial-gradient(circle at 21% 24%, #f8f6f7 3%, rgba(255,255,255,0) 14%), radial-gradient(circle at 50% 77%, #FFFFFF 9%, rgba(255,255,255,0) 12%), radial-gradient(circle at 51% 77%, #414141 17%, rgba(255,255,255,0) 20%), radial-gradient(circle at 52% -6%, #FF0000 64%, rgba(255,255,255,0) 68%), radial-gradient(circle at 50% 9%, #414141 71%, rgba(255,255,255,0) 73%);
+  transform: rotate(22deg);
+  z-index: 10;
+  -webkit-animation: ball 5s forwards;
+  -moz-animation: ball 5s forwards;
+  -o-animation: ball 5s forwards; /* forwards keeps the ball at the result location when done */
+  }
+/*********************************************
+   Animate margins becasue position causes
+   object to be constantly rerendered, making
+   it not clickable.
+***********************************************/
+@-webkit-keyframes ball { from { margin-top: 98%; width: 10px; height: 10px; animation-timing-function: ease-in-out; } 50% { margin-top:8%; width:50px; height:50px; animation-timing-function: ease-in-out; } to { margin-top: 102%; width:80px; height:80px; animation-timing-function: ease-in; }  }
+   @-moz-keyframes ball { from { margin-top: 98%; width: 10px; height: 10px; animation-timing-function: ease-in-out; } 50% { margin-top:8%; width:50px; height:50px; animation-timing-function: ease-in-out; } to { margin-top: 102%; width:80px; height:80px; animation-timing-function: ease-in; }  }
+     @-o-keyframes ball { from { margin-top: 98%; width: 10px; height: 10px; animation-timing-function: ease-in-out; } 50% { margin-top:8%; width:50px; height:50px; animation-timing-function: ease-in-out; } to { margin-top: 102%; width:80px; height:80px; animation-timing-function: ease-in; }  }
+        @keyframes ball { from { margin-top: 98%; width: 10px; height: 10px; animation-timing-function: ease-in-out; } 50% { margin-top:8%; width:50px; height:50px; animation-timing-function: ease-in-out; } to { margin-top: 102%; width:80px; height:80px; animation-timing-function: ease-in; }  }
+
+/* ------------------------------------------------------------------------- */
+/* ------------ Jigglypuff ------------------------------------------------- */
 #jigglypuff,
 #jigglypuff:before {
   position: absolute;
@@ -137,6 +205,8 @@ body.off h2 {
     /*Feet*/ -17px 74px 0px -44px #DB93C7, -21px 77px 0px -42px #ffb7fd, 21px 74px 0px -44px #DB93C7, 27px 77px 0px -42px #ffb7fd;
   }
 #jigglypuff:before {
+  display: block;
+  content: '';
   width: 10px;
   height: 10px;
   left: 53px;
@@ -150,6 +220,8 @@ body.off h2 {
   transform: rotate(3deg);
   }
 #jigglypuff:after {
+  display: block;
+  content: '';
   width: 10px;
   height: 10px;
   left: 52px;
@@ -173,6 +245,8 @@ body.off h2 {
   box-shadow: 34px 112px 0px 7px #DB93C7, 34px 125px 0px 7px #ffb7fd, 78px 114px 0px 7px #DB93C9, 79px 125px 0px 7px #ffb7fd;
   }
 .on #jigglypuff:before {
+  display: block;
+  content: '';
   width: 10px;
   height: 10px;
   left: 53px;
@@ -186,6 +260,8 @@ body.off h2 {
   transform: rotate(3deg);
   }
 .on #jigglypuff:after {
+  display: block;
+  content: '';
   width: 9px;
   height: 12px;
   left: 52px;
@@ -220,6 +296,8 @@ body.off h2 {
   box-shadow: 29px 120px 0px 5px #DB93C7, 27px 125px 0px 7px #ffb7fd, 77px 120px 0px 5px #DB93C7, 80px 125px 0px 7px #ffb7fd;
   }
 .off #jigglypuff:before {
+  display: block;
+  content: '';
   width: 10px;
   height: 10px;
   left: 53px;
@@ -239,6 +317,8 @@ body.off h2 {
   transform: rotate(3deg);
   }
 .off #jigglypuff:after {
+  display: block;
+  content: '';
   width: 11px;
   height: 9px;
   left: 52px;
@@ -253,4 +333,66 @@ body.off h2 {
     /*Left Eye*/ 31px 3px 0px -1px #FFFFFF, 34px 0px 0 7px #009FD5, 37px 2px 0 11px #38BFFF, 36px 2px 0px 14px #FFFFFE,
     /*Mouth*/ 5px 20px 0px -3px #000,
     /*Head*/ 6px 0px 0px 56px #ffb7fd, 6px 6px 0px 57px #DB93C7;
+  }
+
+
+/* ------------------------------------------------------------------------- */
+/* ------------ Whismur ---------------------------------------------------- */
+#whismur,
+#whismur:before,
+#whismur:after {
+  position: absolute;
+  cursor: pointer;
+  }
+#whismur {
+  width: 135px;
+  height: 94px;
+  left: 600px;
+  top: 200px;
+  background: transparent;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border: 0px solid #000000;
+  box-shadow: /*Ears*/ -1px -76px 0px -31px #FFE000, -4px -71px 0px -27px #DAC21B, 9px -64px 0px -29px #AD81A1, 11px -69px 0px -27px #C09CB4;
+  transform: rotate(-45deg);
+  z-index: 10;
+  }
+
+#whismur:before {
+  display: block;
+  content: '';
+  width: 139px;
+  height: 95px;
+  left: 0px;
+  top: 0px;
+  background: transparent;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border: 0px solid #000000;
+  box-shadow: /*Ears*/ 1px -71px 0px -29px #FFE000, 4px -67px 0px -28px #DAC21B, -7px -72px 0px -31px #C09CB6, -4px -67px 0px -27px #AD81A1;
+  transform: rotate(85deg);
+  z-index: 10;
+  }
+#whismur:after {
+  display: block;
+  content: '';
+  width: 10px;
+  height: 10px;
+  left: 82px;
+  top: 34px;
+  background-color: #C09CB6;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  box-shadow:
+    /*Right Eye*/ -17px -5px 0px -4px #000, -17px -3px 0 -4px #000, -17px -1px 0 -4px #000, -17px 7px 0px -4px #000, -17px 9px 0 -4px #000, -17px 11px 0 -4px #000, -7px 3px 0px -4px #000, -9px 3px 0 -4px #000, -11px 3px 0 -4px #000, -23px 3px 0 -4px #000, -25px 3px 0px -4px #000, -27px 3px 0 -4px #000,
+    /*Left Eye*/ 23px -5px 0px -4px #000, 23px -3px 0 -4px #000, 23px -1px 0 -4px #000, 23px 7px 0px -4px #000, 23px 9px 0px -4px #000, 23px 11px 0 -4px #000, 28px 3px 0px -4px #000, 30px 3px 0 -4px #000, 32px 3px 0 -4px #000, 18px 3px 0 -4px #000, 16px 3px 0px -4px #000, 14px 3px 0 -4px #000,
+    /*Mouth*/ 0px 4px 0px 15px #C09CB6, 0px 41px 0px 7px #C09CB6, -10px 31px 0px -2px #D14F11, -6px 30px 0px 0px #D14F11, 0px 26px 0px 5px #C00000, 12px 24px 0px -2px #c00000, 10px 30px 0px -2px #c00000, -12px 24px 0px -2px #c00000,
+    /*Hands*/ -31px 32px 0px 2px #C09CB6, -29px 32px 0px 3px #AD81A1, 30px 36px 0px 2px #C09CB6, 29px 34px 0px 3px #AD81A1,
+    /*Face*/ 0px 5px 0px 43px #C09CB6, -2px 11px 0px 45px #AD81A1,
+    /*Feet*/ -20px 51px 0px 13px #DAC21B, -24px 48px 0px 14px #AD81A1, 17px 51px 0px 13px #DAC21B, 21px 47px 0px 14px #AD81A1;
+  transform: rotate(45deg);
+  z-index: 9;
   }
