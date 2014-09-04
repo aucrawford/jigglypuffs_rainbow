@@ -56,7 +56,7 @@ body.off {
   }
 body.off h1 {
   color: #000;
-  box-shadow: 30px 402px 0px 58px #1C612A;
+  box-shadow: 30px 506px 0px 158px #1C612A;
   }
 body.on h1 {
   color: #FFC2F0;
@@ -72,7 +72,7 @@ body.on h1 {
                 0 5px 10px rgba(0,0,0,.25),
                 0 10px 10px rgba(0,0,0,.2),
                 0 20px 20px rgba(0,0,0,.15);
-  box-shadow: 30px 402px 0px 58px #5DB36E;
+  box-shadow: 30px 506px 0px 158px #5DB36E;
   }
 body.on h2,
 body.off h2 {
@@ -130,7 +130,7 @@ body.off h2 {
   background: #000000;
   color: #ffffff;
   position: absolute;
-  bottom: 40px;
+  top: 125px;
   left: 20px;
   z-index: 8;
   }
@@ -150,7 +150,20 @@ body.off h2 {
   z-index: 7;
   -webkit-backface-visibility: hidden; /* prevent flash at start of animation */
   }
-
+#field p {
+  position: absolute;
+  top: 125px;
+  font-size: 1.5rem;
+  display: block;
+  border: 1px solid #000;
+  border-radius: 1rem;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 4px 4px 4px #000;
+  }
+.off .pokeball {
+  display: none;
+}
 .pokeball {
   position: absolute;
   cursor: pointer;
@@ -242,21 +255,23 @@ body.off h2 {
   -moz-border-radius: 30% 30% 30% 30%;
   -webkit-border-radius: 30% 30% 30% 30%;
   background: rgba(255, 0, 0, 0);
-  box-shadow: 34px 112px 0px 7px #DB93C7, 34px 125px 0px 7px #ffb7fd, 78px 114px 0px 7px #DB93C9, 79px 125px 0px 7px #ffb7fd;
+  box-shadow:
+    /*Feet*/ 34px 112px 0px 7px #DB93C7, 34px 125px 0px 7px #ffb7fd, 78px 114px 0px 7px #DB93C9, 79px 125px 0px 7px #ffb7fd;
   }
 .on #jigglypuff:before {
   display: block;
   content: '';
-  width: 10px;
-  height: 10px;
-  left: 53px;
-  top: 44px;
+  width: 92px;
+  height: 92px;
+  left: 20px;
+  top: 25px;
   background: rgba(0, 184, 255, 0);
   border-radius: 2% 2% 5% 50%;
   -moz-border-radius: 2% 2% 5% 50%;
   -webkit-border-radius: 2% 2% 5% 50%;
   border: 0px solid #000000;
-  box-shadow: -34px -28px 0px 8px #000000, -22px -18px 0 25px #ffb7fd, 43px -32px 0px 8px #000000, 42px -32px 0px 15px #ffb7fd;
+  box-shadow:
+    /*Ears*/ -20px -26px 0px -9px #000000, -23px -29px 0 -5px #ffb7fd, 12px -26px 0px -9px #000000, 15px -29px 0px -5px #ffb7fd;
   transform: rotate(3deg);
   }
 .on #jigglypuff:after {
@@ -293,28 +308,23 @@ body.off h2 {
   -moz-border-radius: 30% 30% 30% 30%;
   -webkit-border-radius: 30% 30% 30% 30%;
   background: rgba(255, 0, 0, 0);
-  box-shadow: 29px 120px 0px 5px #DB93C7, 27px 125px 0px 7px #ffb7fd, 77px 120px 0px 5px #DB93C7, 80px 125px 0px 7px #ffb7fd;
+  box-shadow:
+    /*Feet*/ 29px 120px 0px 5px #DB93C7, 27px 125px 0px 7px #ffb7fd, 77px 120px 0px 5px #DB93C7, 80px 125px 0px 7px #ffb7fd;
   }
 .off #jigglypuff:before {
   display: block;
   content: '';
-  width: 10px;
-  height: 10px;
-  left: 53px;
-  top: 48px;
+  width: 92px;
+  height: 92px;
+  left: 20px;
+  top: 25px;
   background: rgba(0, 184, 255, 0);
   border-radius: 2% 2% 5% 50%;
   -moz-border-radius: 2% 2% 5% 50%;
   -webkit-border-radius: 2% 2% 5% 50%;
   border: 0px solid #000000;
   box-shadow:
-    /*Ears*/
-    -23px 40px 0px 6px #ffb7fd,
-    -35px -26px 0px 8px #000000,
-    -23px -17px 0 25px #ffb7fd,
-    44px -30px 0px 8px #000000,
-    44px -30px 0px 15px #ffb7fd;
-  transform: rotate(3deg);
+    /*Ears*/ -20px -20px 0px -9px #000000, -23px -25px 0 -5px #ffb7fd, 14px -21px 0px -9px #000000, 17px -25px 0px -5px #ffb7fd;
   }
 .off #jigglypuff:after {
   display: block;
