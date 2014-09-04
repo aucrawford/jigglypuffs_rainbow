@@ -26,3 +26,6 @@ To Do:
 * spruce up the environment a bit with more pokemon and pokeball animation on click.
 * style the fail messages better.
 * not yet fully browser tested.
+
+Jigglypuff and pokeballs are not owned by me and are the copyrighted property of
+Pokémon. This is a fan made project for fun and practice.
