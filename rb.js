@@ -2,7 +2,7 @@ var field = document.getElementById('field')
   , scoreBoard = document.getElementById('score')
   , body = document.body
   , startBtn = document.getElementById('start')
-  , jugglypuff = document.getElementById('jigglypuff')
+  , whismur = document.getElementById('whismur')
   , fWidth = field.clientWidth
   , fHeight = field.clientHeight
   , score = 0
@@ -37,9 +37,9 @@ function pokeballs() {
     e.stopPropagation();
   });
   field.appendChild(pokeball);
-  if ( hasClass(body, 'on') && balls == 4 ){
+  if ( hasClass(body, 'game-on') && balls == 4 ){
     setTimeout( function() {
-      body.className = 'off';
+      body.className = 'game-over';
       failText("Uh oh! Jigglypuff isn't happy. You let four pokeballs get past you. Maybe if you say sorry if you want to to try again.");
     }, 5000);
   } else if ( balls < 4 ) {
@@ -50,27 +50,27 @@ function pokeballs() {
 }
 
 document.addEventListener('click', function() {
-  if ( hasClass(body, 'on') ) {
-    body.className = 'off';
+  if ( hasClass(body, 'game-on') ) {
+    body.className = 'game-over';
     balls = 5;
     failText("Uh oh! Jigglypuff isn't happy. You missed that one. I bet Jigglypuff will let you try again. If you are extra apologetic.");
   }
 });
 
 startBtn.addEventListener('click', function(e) {
-  body.className = 'on';
+  body.className = 'game-on';
   e.stopPropagation();
   pokeballs();
 });
 
-jigglypuff.addEventListener('click', function(e) {
-  if ( hasClass(body, 'on') ) {
-    body.className = 'off';
+whismur.addEventListener('click', function(e) {
+  if ( hasClass(body, 'game-on') ) {
+    body.className = 'game-over';
     failText("Uh oh! I don't think Jigglypuff likes being poked. You should probably apologize.");
-  } else if ( hasClass(body, 'off') ) {
+  } else if ( hasClass(body, 'game-over') ) {
     window.location.reload();
   } else {
-    body.className = 'off';
+    body.className = 'game-over';
   }
   e.stopPropagation();
 });
