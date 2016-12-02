@@ -1,7 +1,15 @@
 Jigglypuff's Rainbow
 ============
 
-Jigglypuff's rainbow is beautiful. Can you stop the pokeballs from ruining her day?
+Jigglypuff's day is made perfect by a beautiful rainbow. Can you stop the pokeballs from ruining her day?
+
+v 1.2
+--------------------
+* Added Whismur
+* Cleaned up animation
+* Fixed Jigglypuff's ears
+* expanded play field
+* Updated responsive design
 
 Game Instructions
 --------------------
@@ -23,10 +31,10 @@ To Do:
 --------------------
 
 * add random side to side pokeball animation
-* add further responsiveness
-* spruce up the environment a bit with more pokémon and pokeball animation on click.
-* style the fail messages better.
-* not yet fully browser tested.
+* add more Pokémon
+* spruce up the environment a bit
+* not yet fully browser tested
+* add an about page
 
-Jigglypuff and pokeballs are not owned by me and are the copyrighted property of
-Pokémon. This is a fan made project for fun and practice.
+Jigglypuff Whismur and Pokéballs are not owned by me and are the copyrighted property of
+The Pokémon Company. This is a fan made project for fun and practice.
