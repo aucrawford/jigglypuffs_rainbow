@@ -410,8 +410,8 @@ body.game-on button {
 #whismur {
   width: 135px;
   height: 94px;
-  left: 31%;
-  top: 64%;
+  left: 38%;
+  top: 63%;
   background: transparent;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -420,6 +420,16 @@ body.game-on button {
   box-shadow: /*Ears*/ -1px -76px 0px -31px #FFE000, -4px -71px 0px -27px #DAC21B, 9px -64px 0px -29px #AD81A1, 11px -69px 0px -27px #C09CB4;
   transform: rotate(-45deg);
   z-index: 9;
+}
+@media (min-width: 600px) {
+  #whismur {
+    left: 28%;
+  }
+}
+@media (min-width: 1200px) {
+  #whismur {
+    left: 24%;
+  }
 }
 .game-on #whismur {
   left: 50%;
