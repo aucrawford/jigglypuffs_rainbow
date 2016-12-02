@@ -3,6 +3,8 @@ Jigglypuff's Rainbow
 
 Jigglypuff's day is made perfect by a beautiful rainbow. Can you stop the pokeballs from ruining her day?
 
+http://aucrawford.github.io/jigglypuffs_rainbow/
+
 ![Jigglypuff Rainbow](https://github.com/aucrawford/jigglypuffs_rainbow/raw/master/screen_shot_v1.2.png)
 
 v 1.2
