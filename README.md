@@ -35,9 +35,8 @@ To Do:
 --------------------
 
 * add random side to side pokeball animation
-* add more Pokémon
+* add more Pok�mon
 * spruce up the environment a bit
-* not yet fully browser tested
 * add an about page
 
 Jigglypuff Whismur and Pokéballs are not owned by me and are the copyrighted property of
