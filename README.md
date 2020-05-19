@@ -1,7 +1,7 @@
 Jigglypuff's Rainbow
 ============
 
-Jigglypuff's day is made perfect by a beautiful rainbow. Can you stop the pokeballs from ruining her day?
+Jigglypuff's day is made perfect by a beautiful rainbow. Can you stop the pokéballs from ruining her day?
 
 http://aucrawford.github.io/jigglypuffs_rainbow/
 
@@ -25,19 +25,16 @@ Game Instructions
 Purpose
 --------------------
 
-This is a personal project to muck around with css3 and javascript. Jigglypuff,
-pokeballs, and the rainbow are pure css from single nodes. The animation is css
-as well.
+This is a personal project to muck around with css3 and javascript. Jigglypuff, pokéballs, and the rainbow are pure css from single nodes. The animation is css as well.
 
 Javascript handles the click events.
 
 To Do:
 --------------------
 
-* add random side to side pokeball animation
+* add random side to side pokéball animation
 * add more Pokémon
 * spruce up the environment a bit
 * add an about page
 
-Jigglypuff Whismur and PokÃ©balls are not owned by me and are the copyrighted property of
-The PokÃ©mon Company. This is a fan made project for fun and practice.
+Jigglypuff, Whismur, and Pokéballs are not owned by me and are the copyrighted property of The Pokémon Company. This is a fan made project for fun and practice.
