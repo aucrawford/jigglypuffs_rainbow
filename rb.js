@@ -40,7 +40,7 @@ function pokeballs() {
   if ( hasClass(body, 'game-on') && balls == 4 ){
     setTimeout( function() {
       body.className = 'game-over';
-      failText("Uh oh! Jigglypuff isn't happy. You let four pokeballs get past you. Maybe if you say sorry if you want to to try again.");
+      failText("Uh oh! Jigglypuff isn't happy. You let four pokeballs get past you. Maybe you should say sorry, if you want to to try again.");
     }, 5000);
   } else if ( balls < 4 ) {
     setTimeout( function() {
