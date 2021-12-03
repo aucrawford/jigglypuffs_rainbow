@@ -40,7 +40,7 @@ function pokeballs() {
   if ( hasClass(body, 'game-on') && balls == 4 ){
     setTimeout( function() {
       body.className = 'game-over';
-      failText("Uh oh! Jigglypuff isn't happy. You let four pokeballs get past you. Maybe you should say sorry, if you want to to try again today.");
+      failText("Uh oh! Jigglypuff isn't happy. You let four pokeballs get past you. Maybe you should say sorry if you want to try again today.");
     }, 5000);
   } else if ( balls < 4 ) {
     setTimeout( function() {
@@ -53,7 +53,7 @@ document.addEventListener('click', function() {
   if ( hasClass(body, 'game-on') ) {
     body.className = 'game-over';
     balls = 5;
-    failText("Uh oh! Jigglypuff isn't happy. You missed that one. I bet Jigglypuff will let you try again. If you are extra apologetic.");
+    failText("Uh oh! Jigglypuff isn't happy. You missed that one. I bet Jigglypuff will let you try again if you are extra apologetic.");
   }
 });
 
