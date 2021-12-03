@@ -66,7 +66,7 @@ startBtn.addEventListener('click', function(e) {
 whismur.addEventListener('click', function(e) {
   if ( hasClass(body, 'game-on') ) {
     body.className = 'game-over';
-    failText("Uh oh! I don't think Jigglypuff likes being poked. You should probably apologize.");
+    failText("Uh oh! I don't think Jigglypuff likes her friends being poked. You should probably apologize.");
   } else if ( hasClass(body, 'game-over') ) {
     window.location.reload();
   } else {
